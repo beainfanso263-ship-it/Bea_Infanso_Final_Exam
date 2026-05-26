@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student - Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Student Management System</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/register.html" class="nav-link">Add Student</a></li>
+                <li><a href="/list.html" class="nav-link">View Students</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="form-container">
+            <h2>Edit Student Information</h2>
+            
+            <div id="alert" class="alert"></div>
+            <div id="loading" class="spinner hidden"></div>
+
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="full_name" placeholder="Enter student's full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course *</label>
+                    <input type="text" id="course" name="course" placeholder="Enter course name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearLevel">Year Level *</label>
+                    <select id="yearLevel" name="year_level" required>
+                        <option value="">Select year level</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailAddress">Email Address *</label>
+                    <input type="email" id="emailAddress" name="email_address" placeholder="Enter student's email address" required>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a href="/list.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Student Management System. All rights reserved.</p>
+            <p>Course: IT318 - Web Development | Final Practical Examination</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const editForm = document.getElementById('editForm');
+        const params = new URLSearchParams(window.location.search);
+        const studentId = params.get('id');
+
+        editForm.addEventListener('submit', (e) => {
+            handleFormSubmit(e, 'editForm', true, studentId);
+        });
+    </script>
+</body>
+</html>
