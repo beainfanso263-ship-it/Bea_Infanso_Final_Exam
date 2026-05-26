@@ -383,8 +383,8 @@ This project successfully demonstrates:
 
 ---
 
-**Deployment Link**: [Your Render Deployment URL]
+**Deployment Link**: https://bea-infanso-final-exam.onrender.com
 
-**GitHub Repository**: [Your GitHub Repository URL]
+**GitHub Repository**: https://github.com/beainfanso263-ship-it/Bea_Infanso_Final_Exam
 
 **Last Updated**: May 26, 2024
