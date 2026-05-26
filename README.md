@@ -135,11 +135,11 @@ This Student Information Management System is a full-stack web application that 
 
 4. **Set Environment Variables in Render**
    - Add the following variables in Render dashboard:
-     - `DB_HOST`: Your Aiven database host
-     - `DB_USER`: Your Aiven database user
-     - `DB_PASSWORD`: Your Aiven database password
-     - `DB_NAME`: Your Aiven database name
-     - `NODE_ENV`: production
+     - `DB_HOST`: mysql-1fc52a22-beainfanso263-c8f7.e.aivencloud.com
+     - `DB_USER`: avnadmin
+     - `DB_PASSWORD`: AVNS_6ovcwZLwMOsDeS0KZMq
+     - `DB_NAME`: student_management
+     - `NODE_ENV`: development
 
 5. **Deploy**
    - Click "Create Web Service"
